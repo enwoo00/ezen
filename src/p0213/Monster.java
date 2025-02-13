@@ -23,3 +23,5 @@ public abstract class Monster {
 			m.test();
 		}
 	}
+	
+	//https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.4.0/

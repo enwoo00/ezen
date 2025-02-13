@@ -15,8 +15,41 @@ VALUES('홍길동','HONG','1234'),
 ('이길동','LEE','1234');
 
 select * from USER_INFO
-where UI_NAME like '%동';
+;
 
 delete from USER_INFO
-where UI_NUM=2
-;
+where UI_NUM=2;
+
+update USER_INFO
+set UI_NAME='성룡',
+UI_ID='SUNG'
+where UI_NAME='홍금보';
+
+
+create table FOOD_INFO(
+FI_NUM INT primary key auto_increment,
+FI_NAME VARCHAR(30) not null,
+FI_PRICE INT not null
+);
+
+insert into FOOD_INFO(FI_NAME, FI_PRICE)
+values ('김밥', 3500),
+('떡볶이', 4000),
+('순대',4500),
+('라면',5000),
+('해장라면',6000);
+
+select * from FOOD_INFO
+where FI_PRICE >= 4000
+and FI_NAME like '%라%';
+
+update FOOD_INFO
+set FI_PRICE = FI_PRICE+500;
+
+select * from FOOD_INFO;
+
+delete from FOOD_INFO
+where FI_NUM>=6;
+
+update FOOD_INFO
+set FI_PRICE = FI_PRICE*1.1;
