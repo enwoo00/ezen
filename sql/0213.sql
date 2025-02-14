@@ -53,3 +53,7 @@ where FI_NUM>=6;
 
 update FOOD_INFO
 set FI_PRICE = FI_PRICE*1.1;
+
+select * from FOOD_INFO
+order by FI_NAME asc,
+FI_PRICE asc; ##안쓰면 오름차순.asc.
