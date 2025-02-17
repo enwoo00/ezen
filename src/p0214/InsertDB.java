@@ -5,19 +5,22 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import p0217.DataBaseConnector;
+
 public class InsertDB {
 	
 	public static void main(String[] args) {
-		try {
+		/*try {
 				Class.forName("com.mysql.cj.jdbc.Driver");
 			}catch(Exception e) {
 				e.printStackTrace();
 		}
 		String url = "jdbc:mysql://localhost:3306/ezen";
 		String username = "root";
-		String password = "r1r2r3";
+		String password = "r1r2r3";*/
 		try {
-			Connection con = DriverManager.getConnection(url,username,password);
+			Connection con = DataBaseConnector.getCon();
+					//DriverManager.getConnection(url,username,password);
 			Statement stmt = con.createStatement();
 			String sql = "INSERT INTO FOOD_INFO(FI_NAME, FI_PRICE)";
 			sql += " VALUES('참치김밥',2000)";

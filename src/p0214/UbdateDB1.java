@@ -30,5 +30,4 @@ public class UbdateDB1 {
 			e.printStackTrace();
 		}
 	}
-
 }
