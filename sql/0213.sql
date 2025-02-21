@@ -57,3 +57,8 @@ set FI_PRICE = FI_PRICE*1.1;
 select * from FOOD_INFO
 order by FI_NAME asc,
 FI_PRICE asc; ##안쓰면 오름차순.asc.
+
+##숫자 - 정수:TINYINT, INT  / 실수:FLOAT, DOUBLE
+##문자 - CHAR, VARCHAR, TEXT, MIDIUMTEXT
+##날짜 - DATE, TIME, DATETIME, TIMESTAMP
+## - DATE_FORMAT(NOW(),'%y%m%d'), DATE_FORMAT(NOW(),'%H%i%s')
